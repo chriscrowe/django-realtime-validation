@@ -9,7 +9,7 @@ $(document).ready(function(){
     };
 
     var integer_field_validator = function(input_val){
-        var re = /-?\d+/g;
+        var re = /^-?\d+$/g;
         return input_val == "" || !!(input_val.match(re));
     };
 

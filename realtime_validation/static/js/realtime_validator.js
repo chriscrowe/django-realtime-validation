@@ -50,5 +50,6 @@ $(document).ready(function(){
             input.removeClass('invalid-value');
     };
 
-    $('input[data-validators]').focusout(validate_input_value);
+    $('input[data-validators]').focusout(validate_input_value)
+        .keyup(validate_input_value);
 });

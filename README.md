@@ -36,7 +36,7 @@ Usage
 **Thats it!** As you type into the fields they will turn red when invalid characters are typed.
 
 Todo
-====
+----
 
 * Only ModelForms are currently supported -- need to add code for regular forms
 * Only 3 types of reatlime validation are currently supported - IntegerFields, FloatFields, and *required* fields

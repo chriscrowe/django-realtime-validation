@@ -41,3 +41,4 @@ Todo
 * Only ModelForms are currently supported -- need to add code for regular forms
 * Only 3 types of reatlime validation are currently supported - IntegerFields, FloatFields, and *required* fields
 * Plans to support custom validator functions
+* May add descriptive error messages in realtime

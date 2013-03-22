@@ -20,7 +20,7 @@ Usage
 
     from realtime_validation.forms import RealtimeValidatingModelForm
   
-    PersonForm(RealtimeValidatingModelForm):
+    class PersonForm(RealtimeValidatingModelForm):
         class Meta:
             model = Person
 

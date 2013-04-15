@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Django-realtime-validation : Django client-side realtime form validation using JavaScript" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Django-realtime-validation</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/skandocious/django-realtime-validation">View on GitHub</a>
+
+          <h1 id="project_title">Django-realtime-validation</h1>
+          <h2 id="project_tagline">Django client-side realtime form validation using JavaScript</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/skandocious/django-realtime-validation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/skandocious/django-realtime-validation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>django-realtime-validation</h1>
+
+<p>Django client-side realtime form field validation using JavaScript.</p>
+
+<p>This <strong>does not use AJAX</strong> or any other server communcation to validate the form fields, so there are no extra requests being made to the server.</p>
+
+<h2>Usage</h2>
+
+<p><em>settings.py</em></p>
+
+<pre><code>INSTALLED_APPS = (
+    ...
+    'realtime_validation',
+)
+</code></pre>
+
+<p><em>forms.py</em></p>
+
+<pre><code>from realtime_validation.forms import RealtimeValidatingModelForm
+
+class PersonForm(RealtimeValidatingModelForm):
+    class Meta:
+        model = Person
+</code></pre>
+
+<p><em>template.html</em></p>
+
+<pre><code>...
+&lt;script src="{{ STATIC_URL }}/js/realtime_validation.js"&gt;&lt;/script&gt;
+&lt;link href="{{ STATIC_URL }}/css/realtime_validation.css" rel="stylesheet"&gt;
+...
+</code></pre>
+
+<p><strong>Thats it!</strong> As you type into the fields they will turn red when invalid characters are typed.</p>
+
+<h2>Todo</h2>
+
+<ul>
+<li>Only ModelForms are currently supported -- need to add code for regular forms</li>
+<li>Only 3 types of reatlime validation are currently supported - IntegerFields, FloatFields, and <em>required</em> fields</li>
+<li>Plans to support custom validator functions</li>
+<li>May add descriptive error messages in realtime</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Django-realtime-validation maintained by <a href="https://github.com/skandocious">skandocious</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
